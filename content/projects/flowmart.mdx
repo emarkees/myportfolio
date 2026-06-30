@@ -1,0 +1,67 @@
+---
+title: "FlowMart"
+date: "2024-03-01"
+description: "Multi-Tenant B2B E-Commerce Platform & Supply Chain Infrastructure"
+techStack: ["Go", "TypeScript", "Kafka", "PostgreSQL", "Kubernetes", "AWS EKS"]
+githubLink: "https://github.com/emarkeees/flowmart"
+liveDemo: "https://flowmart-opal.vercel.app"
+status: "Production"
+role: "Lead Engineer & Cloud Architect"
+timeline: "2024 — Ongoing"
+teamSize: "6 Engineers"
+domain: "E-Commerce · Logistics · FinTech"
+---
+
+## 01 / Executive Summary
+
+FlowMart is a **cloud-native, multi-tenant B2B marketplace and supply chain platform** built to modernize wholesale distribution across West Africa. The platform connects manufacturers, distributors, and retailers in a single transactional layer — enabling real-time inventory visibility, automated procurement workflows, and embedded financial services.
+
+As the Lead Cloud Architect and Backend Engineering Lead, I was responsible for the complete system architecture from initial design through to production deployment. The primary technical challenge was building a platform capable of handling **50,000+ concurrent sessions** with consistent sub-150ms P99 API latency, while maintaining strict data isolation between tenant organizations in a shared infrastructure environment.
+
+The architecture is built around an **event-driven microservices pattern** deployed on AWS EKS, with Apache Kafka as the central nervous system for asynchronous inter-service communication. The system processes over **3 million events per day** with full audit trail compliance required by Nigeria's SEC fintech sandbox.
+
+<ResultsGrid 
+  data='[
+    { "val": "50K", "sym": "+", "label": "Concurrent Sessions" },
+    { "val": "<150", "sym": "ms", "label": "P99 API Latency" },
+    { "val": "99.98", "sym": "%", "label": "Uptime SLA" },
+    { "val": "3M", "sym": "+", "label": "Events / Day" },
+    { "val": "80", "sym": "%", "label": "Reduced Deploy Lead Time" },
+    { "val": "12", "sym": "×", "label": "Microservices in Production" }
+  ]'
+/>
+
+## 02 / System Architecture Diagram
+
+<FlowmartArchitecture />
+
+## 03 / Full Technology Stack
+
+<TechStack 
+  data='[
+    {
+      "title": "Backend & Languages",
+      "items": ["Go (Golang)", "TypeScript", "Node.js", "Gin Framework", "NestJS", "gRPC", "REST API", "GraphQL"],
+      "accentColor": "#38BDF8",
+      "accentItems": ["Go (Golang)", "TypeScript", "Node.js"]
+    },
+    {
+      "title": "Cloud & Infrastructure",
+      "items": ["AWS EKS", "Kubernetes", "Terraform", "Helm", "ArgoCD", "AWS IAM", "AWS ALB", "AWS Route53"],
+      "accentColor": "#A78BFA",
+      "accentItems": ["AWS EKS", "Kubernetes", "Terraform", "Helm", "ArgoCD", "AWS IAM", "AWS ALB", "AWS Route53"]
+    },
+    {
+      "title": "Data & Messaging",
+      "items": ["PostgreSQL", "Apache Kafka", "Redis", "DynamoDB", "Elasticsearch", "S3"],
+      "accentColor": "#34D399",
+      "accentItems": ["PostgreSQL", "Apache Kafka", "Redis", "DynamoDB", "Elasticsearch", "S3"]
+    },
+    {
+      "title": "Observability & CI/CD",
+      "items": ["Prometheus", "Grafana", "Loki", "Datadog", "GitHub Actions", "PagerDuty"],
+      "accentColor": "#FB923C",
+      "accentItems": ["Prometheus", "Grafana", "Loki", "Datadog", "GitHub Actions", "PagerDuty"]
+    }
+  ]'
+/>
