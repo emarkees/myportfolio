@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { FadeUp } from "@/components/ui/fade-up";
+import { ContactForm } from "@/components/contact-form";
 import { getAllProjects } from "@/lib/mdx";
 import { siteData } from "@/config/site-data";
 
@@ -41,7 +42,7 @@ export default async function Home() {
               <div className="w-1.5 h-1.5 rounded-full bg-accent" />
               <div className="font-mono text-xs font-medium text-accent tracking-[0.1em] uppercase">Full-Stack · Cloud · DevOps</div>
             </div>
-            <h1 className="text-5xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mb-6">
               <span className="block">Hi, I'm</span>
               <span className="block">{info.name.split(' ')[0]} <span className="text-primary">{info.name.split(' ')[1]}.</span></span>
             </h1>
@@ -87,7 +88,7 @@ export default async function Home() {
           <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border">
               {siteData.stats.map((stat, i) => (
-                <FadeUp key={i} className="p-8 lg:p-10 text-center md:text-left">
+                <FadeUp key={i} className="p-6 lg:p-10 text-center md:text-left">
                   <div className="font-mono text-3xl font-semibold text-foreground tracking-tight mb-2">
                     {stat.value.replace('+', '').replace('×', '')}
                     <span className="text-accent text-xl">{stat.value.match(/[+×]/)?.[0]}</span>
@@ -161,7 +162,7 @@ export default async function Home() {
               <h2 className="text-3xl font-bold text-foreground tracking-tight">Career Profile & Expertise</h2>
             </FadeUp>
 
-            <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 mb-24">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 mb-16 lg:mb-24">
               <FadeUp className="text-[15px] text-muted-foreground leading-relaxed space-y-5">
                 {info.aboutParagraphs.map((para, i) => (
                   <p key={i}>{renderRichText(para)}</p>
@@ -200,7 +201,7 @@ export default async function Home() {
               <h3 className="text-2xl font-bold text-foreground tracking-tight">Engineering Journey</h3>
             </FadeUp>
 
-            <div className="grid lg:grid-cols-2 gap-16">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
               {/* First Column */}
               <div className="relative pl-8 border-l border-border space-y-12">
                 {siteData.resume.experience.slice(0, 2).map((job, i) => (
@@ -245,10 +246,10 @@ export default async function Home() {
         </section>
 
         <section id="contact" className="border-t border-border bg-card">
-          <div className="py-24 px-6 lg:px-20 max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-20 items-start">
+          <div className="py-16 lg:py-24 px-6 lg:px-20 max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <FadeUp className="contact-left">
               <div className="font-mono text-xs font-medium text-accent tracking-[0.12em] uppercase mb-4">// get in touch</div>
-              <h3 className="text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-5">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-[1.15] mb-5">
                 Let's Build Something<br/><span className="text-accent">Exceptional.</span>
               </h3>
               <p className="text-[14px] text-muted-foreground leading-relaxed mb-10 max-w-md">
@@ -295,50 +296,7 @@ export default async function Home() {
             </FadeUp>
             
             <FadeUp>
-              <form action="https://formspree.io/f/xnqrezql" method="POST" className="flex flex-col gap-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="flex flex-col gap-2">
-                    <Label htmlFor="firstName" className="font-mono text-[11px] text-muted-foreground tracking-[0.08em] uppercase">First Name</Label>
-                    <Input id="firstName" name="firstName" placeholder="John" required className="bg-background border-border text-[13px] h-10 focus-visible:ring-accent" />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <Label htmlFor="lastName" className="font-mono text-[11px] text-muted-foreground tracking-[0.08em] uppercase">Last Name</Label>
-                    <Input id="lastName" name="lastName" placeholder="Smith" required className="bg-background border-border text-[13px] h-10 focus-visible:ring-accent" />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label htmlFor="email" className="font-mono text-[11px] text-muted-foreground tracking-[0.08em] uppercase">Email Address</Label>
-                  <Input id="email" name="email" type="email" placeholder="john@company.com" required className="bg-background border-border text-[13px] h-10 focus-visible:ring-accent" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label htmlFor="company" className="font-mono text-[11px] text-muted-foreground tracking-[0.08em] uppercase">Company / Organization</Label>
-                  <Input id="company" name="company" placeholder="Acme Corp" className="bg-background border-border text-[13px] h-10 focus-visible:ring-accent" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label htmlFor="engagementType" className="font-mono text-[11px] text-muted-foreground tracking-[0.08em] uppercase">Engagement Type</Label>
-                  <div className="relative">
-                    <select id="engagementType" name="engagementType" className="w-full bg-background border border-border rounded-md px-3.5 py-2.5 text-[13px] text-foreground min-h-[40px] focus:outline-none focus:ring-1 focus:ring-accent appearance-none">
-                      <option value="full-time">Full-time Role</option>
-                      <option value="contract">Contract</option>
-                      <option value="consulting">Consulting</option>
-                      <option value="other">Other</option>
-                    </select>
-                    <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none">
-                      <ChevronDown className="w-3.5 h-3.5 text-muted-foreground" />
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label htmlFor="message" className="font-mono text-[11px] text-muted-foreground tracking-[0.08em] uppercase">Message</Label>
-                  <Textarea id="message" name="message" placeholder="Describe the opportunity, project scope, or what you'd like to discuss..." required className="min-h-[120px] bg-background border-border text-[13px] resize-y focus-visible:ring-accent py-3" />
-                </div>
-                <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 mt-2">
-                  <div className="font-mono text-[11px] text-muted-foreground">Response within 24 hrs · All fields required</div>
-                  <Button type="submit" className="w-full sm:w-auto flex items-center gap-2 bg-accent text-background hover:bg-accent/90 px-7 py-2.5 text-[13px] font-medium h-auto rounded-md">
-                    <Send className="w-3.5 h-3.5" /> Send Message
-                  </Button>
-                </div>
-              </form>
+              <ContactForm />
             </FadeUp>
           </div>
         </section>
