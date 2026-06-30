@@ -11,19 +11,19 @@ export const siteData = {
     heroDescription: "Engineering high-availability, cloud-native systems at scale. Deep expertise in **TypeScript**, **Go**, and **Node.js** — paired with battle-tested experience on **AWS**, Kubernetes, and Terraform. I design backend architectures and CI/CD pipelines that don't break at 3AM.",
     aboutParagraphs: [
       "I'm a **Full-Stack Software Engineer** and **Cloud Architect** with 6+ years of experience building and scaling distributed systems. I specialize in designing resilient backend architectures, cloud-native infrastructure, and end-to-end DevOps pipelines that serve millions of users.",
-      "My engineering philosophy centers on **operational simplicity** — systems should be as easy to understand, debug, and extend as they are to build. I take ownership from the first line of code to production observability.",
+      "My engineering philosophy centers on **operational simplicity** systems should be as easy to understand, debug, and extend as they are to build. I take ownership from the first line of code to production observability.",
       "Previously at fintech startups and enterprise logistics companies, I've led infrastructure migrations from bare-metal to multi-cloud Kubernetes clusters, designed event-driven data pipelines processing 2M+ events/day, and built CI/CD systems that deploy 100+ times a week without drama."
     ]
   },
   stats: [
-    { value: "6+", label: "Years of Experience" },
-    { value: "40+", label: "Systems Deployed" },
-    { value: "5×", label: "Cloud Certifications" },
+    { value: "4+", label: "Years of Experience" },
+    { value: "10+", label: "Systems Deployed" },
+    { value: "2×", label: "Cloud Certifications" },
     { value: "TS · Go", label: "Core Tech Stack" }
   ],
   archive: {
     headerStats: [
-      { value: "8", symbol: "×", label: "Production Deploys" },
+      { value: "5", symbol: "×", label: "Production Deploys" },
       { value: "3", symbol: "+", label: "Open Source" }
     ],
     filterTabs: [
@@ -75,9 +75,9 @@ export const siteData = {
     ],
     education: [
       {
-        degree: "B.Sc. Computer Science",
-        institution: "University of Lagos (UNILAG)",
-        timeline: "2014 — 2018"
+        degree: "B.Sc. Forestry and Wildlife Management",
+        institution: "Federal University of Technology, Akure (FUTA)",
+        timeline: "2014 — 2019"
       }
     ],
     certifications: [

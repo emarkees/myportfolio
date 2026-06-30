@@ -15,7 +15,9 @@ export function Navbar() {
       </div>
       <div className="flex items-center gap-3">
         <Button variant="ghost" className="hidden sm:flex text-muted-foreground hover:text-foreground">Download CV</Button>
-        <Button className="bg-accent text-background hover:bg-accent/90">Hire Me</Button>
+        <Link href="/#contact" className="inline-flex h-8 shrink-0 items-center justify-center rounded-lg bg-accent px-4 text-sm font-medium text-background transition-all hover:bg-accent/90">
+          Hire Me
+        </Link>
       </div>
     </nav>
   );

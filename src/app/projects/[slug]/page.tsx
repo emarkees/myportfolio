@@ -96,7 +96,9 @@ export default async function ProjectCaseStudy(props: any) {
                   </div>
                   <div className="font-mono text-xs font-medium text-green-500 tracking-[0.06em] mb-1">AVAILABLE FOR HIRE</div>
                   <div className="text-sm text-muted-foreground mb-4">Looking for a Cloud Architect or Senior Full-Stack Engineer?</div>
-                  <Button className="w-full bg-green-500 hover:bg-green-600 text-background font-mono text-xs uppercase tracking-wider">Let's Talk</Button>
+                  <Button  className="w-full bg-green-500 hover:bg-green-600 text-background font-mono text-xs uppercase tracking-wider">
+                    <Link href="/#contact">Let's Talk</Link>
+                  </Button>
                 </div>
 
                 {fm.techStack && (
