@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FolderOpen, Download, ArrowRight, Mail, ChevronDown, Send, ArrowUpRight } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/icons";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -62,9 +62,9 @@ export default async function Home() {
               <Link href="/projects" className="inline-flex h-10 w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-accent px-6 text-sm font-medium text-background transition-all hover:bg-accent/90">
                 <FolderOpen className="w-4 h-4" /> Review My Portfolio
               </Link>
-              <Link href={`https://${siteData.personalInfo.linkedin}`} target="_blank" className="inline-flex h-10 w-full sm:w-auto items-center justify-center gap-2 rounded-lg border border-border bg-background px-6 text-sm font-medium transition-all hover:bg-muted hover:text-foreground">
+              <a href="/Adeyemi_Olusola_Resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-full sm:w-auto items-center justify-center gap-2 rounded-lg border border-border bg-background px-6 text-sm font-medium transition-all hover:bg-muted hover:text-foreground">
                 <Download className="w-4 h-4" /> Contact / Resume
-              </Link>
+              </a>
             </div>
           </FadeUp>
 
@@ -169,8 +169,12 @@ export default async function Home() {
                 ))}
 
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Button className="bg-accent text-background hover:bg-accent/90 p-5 gap-2"><Download className="w-4 h-4"  /> Download Full Resume</Button>
-                  <Button variant="outline" className=" flex gap-2 p-5 "><GithubIcon className="w-4 h-4" /> View GitHub</Button>
+                  <a href="/Adeyemi_Olusola_Resume.pdf" target="_blank" rel="noopener noreferrer" className={buttonVariants({ className: "bg-accent text-background hover:bg-accent/90 p-5 gap-2" })}>
+                    <Download className="w-4 h-4" /> Download Full Resume
+                  </a>
+                  <a href={`https://${info.github}`} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", className: "flex gap-2 p-5" })}>
+                    <GithubIcon className="w-4 h-4" /> View GitHub
+                  </a>
                 </div>
               </FadeUp>
 

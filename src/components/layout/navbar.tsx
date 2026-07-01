@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 
 export function Navbar() {
   return (
@@ -14,7 +14,9 @@ export function Navbar() {
         <Link href="/#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</Link>
       </div>
       <div className="flex items-center gap-3">
-        <Button variant="ghost" className="hidden sm:flex text-muted-foreground hover:text-foreground">Download CV</Button>
+        <a href="/Adeyemi_Olusola_Resume.pdf" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "ghost", className: "hidden sm:flex text-muted-foreground hover:text-foreground" })}>
+          Download CV
+        </a>
         <Link href="/#contact" className="inline-flex h-8 shrink-0 items-center justify-center rounded-lg bg-accent px-4 text-sm font-medium text-background transition-all hover:bg-accent/90">
           Hire Me
         </Link>

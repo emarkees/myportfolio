@@ -76,7 +76,7 @@ export const siteData = {
     education: [
       {
         degree: "B.Sc. Forestry and Wildlife Management",
-        institution: "Federal University of Technology, Akure (FUTA)",
+        institution: "Federal University of Agriculture, Abeokuta",
         timeline: "2014 — 2019"
       }
     ],
