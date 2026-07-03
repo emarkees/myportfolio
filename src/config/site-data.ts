@@ -8,18 +8,18 @@ export const siteData = {
     github: "github.com/emarkeees",
     linkedin: "linkedin.com/in/eadeyemi",
     roles: ["Full-Stack Software Engineer", "Cloud Architect", "DevOps Specialist"],
-    heroDescription: "Engineering high-availability, cloud-native systems at scale. Deep expertise in **TypeScript**, **Go**, and **Node.js** — paired with battle-tested experience on **AWS**, Kubernetes, and Terraform. I design backend architectures and CI/CD pipelines that don't break at 3AM.",
+    heroDescription: "Engineering high availability, cloud native systems at scale. Deep expertise in **TypeScript**, **Go**, and **Node.js** — paired with battle-tested experience on **AWS**, Kubernetes, and Terraform. I design backend architectures and CI/CD pipelines that don't break at 3AM.",
     aboutParagraphs: [
-      "I'm a **Full-Stack Software Engineer** and **Cloud Architect** with 6+ years of experience building and scaling distributed systems. I specialize in designing resilient backend architectures, cloud-native infrastructure, and end-to-end DevOps pipelines that serve millions of users.",
+      "I'm a **Full-Stack Software Engineer** and **Cloud Architect** with 4+ years of experience building and scaling distributed systems. I specialize in designing resilient backend architectures, cloud-native infrastructure, and end-to-end DevOps pipelines that serve millions of users.",
       "My engineering philosophy centers on **operational simplicity** systems should be as easy to understand, debug, and extend as they are to build. I take ownership from the first line of code to production observability.",
       "Previously at fintech startups and enterprise logistics companies, I've led infrastructure migrations from bare-metal to multi-cloud Kubernetes clusters, designed event-driven data pipelines processing 2M+ events/day, and built CI/CD systems that deploy 100+ times a week without drama."
     ]
   },
   stats: [
     { value: "4+", label: "Years of Experience" },
-    { value: "10+", label: "Systems Deployed" },
+    { value: "3+", label: "Systems Deployed" },
     { value: "2×", label: "Cloud Certifications" },
-    { value: "TS · Go", label: "Core Tech Stack" }
+    { value: "TS · Go . Laravel . NodeJs", label: "Core Tech Stack" }
   ],
   archive: {
     headerStats: [
@@ -31,29 +31,29 @@ export const siteData = {
       { name: "Open Source", count: 3 },
       { name: "Cloud / Infra", count: 5 },
       { name: "Full-Stack", count: 6 },
-      { name: "DevOps", count: 4 }
+      { name: "DevOps", count: 2 }
     ]
   },
   resume: {
     experience: [
       {
         id: "flowmart",
-        role: "Senior Full-Stack Engineer & Cloud Architect",
-        company: "FlowMart Technologies",
+        role: "Lead Engineer & Cloud Architect",
+        company: "FlowMart — RCCG Kingdom Hack 3.0",
         location: "Lagos (Remote)",
-        timeline: "2023 — Present",
-        description: "Led architecture of a multi-tenant B2B e-commerce platform serving 50K+ concurrent users. Designed the Kubernetes-based microservices infrastructure on AWS EKS, reducing deployment lead time by 80%.",
-        technologies: ["Go", "AWS EKS", "Kafka", "TypeScript"]
+        timeline: "2025 — Ongoing",
+        description: "Built a unified commerce & last-mile delivery PWA at the RCCG Global Kingdom Hack 3.0. The platform connects buyers, vendors, and riders in Redemption City with real-time GPS tracking, escrow payments, and offline-first PWA architecture.",
+        technologies: ["React 19", "TypeScript", "Node.js", "PostgreSQL", "Socket.io", "Redis", "Paystack"]
       },
-      {
-        id: "finedge",
-        role: "Backend Engineer & DevOps Lead",
-        company: "FinEdge Payments",
-        location: "Lagos",
-        timeline: "2021 — 2023",
-        description: "Built the core transaction processing engine handling 2M+ daily payment events. Migrated monolithic infrastructure to Docker/Kubernetes. Established the team's CI/CD culture with GitHub Actions and ArgoCD.",
-        technologies: ["Node.js", "PostgreSQL", "Kubernetes", "Terraform"]
-      },
+      // {
+      //   id: "finedge",
+      //   role: "Backend Engineer & DevOps Lead",
+      //   company: "FinEdge Payments",
+      //   location: "Lagos",
+      //   timeline: "2021 — 2023",
+      //   description: "Built the core transaction processing engine handling 2M+ daily payment events. Migrated monolithic infrastructure to Docker/Kubernetes. Established the team's CI/CD culture with GitHub Actions and ArgoCD.",
+      //   technologies: ["Node.js", "PostgreSQL", "Kubernetes", "Terraform"]
+      // },
       {
         id: "logicore",
         role: "Full-Stack Developer",

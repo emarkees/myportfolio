@@ -1,67 +1,80 @@
 ---
 title: "FlowMart"
-date: "2024-03-01"
-description: "Multi-Tenant B2B E-Commerce Platform & Supply Chain Infrastructure"
-techStack: ["Go", "TypeScript", "Kafka", "PostgreSQL", "Kubernetes", "AWS EKS"]
-githubLink: "https://github.com/emarkeees/flowmart"
+date: "2025-03-01"
+description: "A unified commerce & last-mile delivery PWA connecting buyers, vendors, and riders — built at RCCG Kingdom Hack 3.0."
+techStack: ["React 19", "Vite", "TypeScript", "Node.js", "Express", "PostgreSQL", "Socket.io", "Redis", "Paystack"]
+githubLink: "https://github.com/OLAMIGHTY010/flowmart"
 liveDemo: "https://flowmart-opal.vercel.app"
-status: "Production"
+status: "Ongoing"
 role: "Lead Engineer & Cloud Architect"
-timeline: "2024 — Ongoing"
+timeline: "2025 — Ongoing"
 teamSize: "6 Engineers"
-domain: "E-Commerce · Logistics · FinTech"
+domain: "E-Commerce · Logistics · PWA"
 ---
 
 ## 01 / Executive Summary
 
-FlowMart is a **cloud-native, multi-tenant B2B marketplace and supply chain platform** built to modernize wholesale distribution across West Africa. The platform connects manufacturers, distributors, and retailers in a single transactional layer — enabling real-time inventory visibility, automated procurement workflows, and embedded financial services.
+FlowMart is a **Progressive Web App (PWA)** built to modernize wholesale and last-mile commerce within the **RCCG Redemption Camp (Redemption City)** ecosystem. Originally developed during the **RCCG Youth and Young Adults (YAYA) Global — Kingdom Hack 3.0** hackathon under the Commerce track, FlowMart has since evolved into an ongoing production platform.
 
-As the Lead Cloud Architect and Backend Engineering Lead, I was responsible for the complete system architecture from initial design through to production deployment. The primary technical challenge was building a platform capable of handling **50,000+ concurrent sessions** with consistent sub-150ms P99 API latency, while maintaining strict data isolation between tenant organizations in a shared infrastructure environment.
+The platform serves as a **unified market infrastructure** connecting local buyers, small vendors, and independent delivery couriers under one system. Users can seamlessly switch between three distinct personas without separate accounts:
 
-The architecture is built around an **event-driven microservices pattern** deployed on AWS EKS, with Apache Kafka as the central nervous system for asynchronous inter-service communication. The system processes over **3 million events per day** with full audit trail compliance required by Nigeria's SEC fintech sandbox.
+- **Buyer Mode** — Browse local shops, purchase groceries & catered food, and track deliveries in real time.
+- **Vendor Mode** — List products, open a digital storefront, manage inventory, and receive direct payments.
+- **Rider Mode** — Pick up marketplace deliveries, use QR-scan verification for orders, and coordinate routing via GPS.
 
 <ResultsGrid 
   data='[
-    { "val": "50K", "sym": "+", "label": "Concurrent Sessions" },
-    { "val": "<150", "sym": "ms", "label": "P99 API Latency" },
-    { "val": "99.98", "sym": "%", "label": "Uptime SLA" },
-    { "val": "3M", "sym": "+", "label": "Events / Day" },
-    { "val": "80", "sym": "%", "label": "Reduced Deploy Lead Time" },
-    { "val": "12", "sym": "×", "label": "Microservices in Production" }
+    { "val": "714", "sym": "+", "label": "Hackathon Votes" },
+    { "val": "3", "sym": "×", "label": "User Modes" },
+    { "val": "<5", "sym": "s", "label": "Rider Location Sync" },
+    { "val": "6", "sym": "", "label": "Engineers on Team" }
   ]'
 />
 
-## 02 / System Architecture Diagram
+## 02 / Key Features
 
-<FlowmartArchitecture />
+- **Three-in-One Role Switching** — Buyers, vendors, and riders operate within a single app, switching modes instantly without separate accounts.
+- **Real-Time Rider Tracking** — Leaflet GPS maps with Socket.io + Redis Pub/Sub deliver sub-5-second rider location updates.
+- **Escrow-Protected Payments** — Funds are held securely via Paystack until delivery is confirmed by QR-scan verification.
+- **Neighbourhood Classifieds** — A local listings section for community buying and selling within Redemption City.
+- **Offline-First PWA** — Service worker architecture ensures core functionality even with intermittent connectivity.
 
-## 03 / Full Technology Stack
+## 03 / Hackathon Context
+
+- **Event:** RCCG YAYA Global — Kingdom Hack 3.0 (2025)
+- **Track:** Commerce
+- **Team Lead:** Olalekan Joy Olatunbosun
+- **Project Code:** T7PXX
+- **Hackathon MVP Repo:** [github.com/OLAMIGHTY010/flowmart](https://github.com/OLAMIGHTY010/flowmart)
+- **Pitch Deck:** [View on Google Slides](https://docs.google.com/presentation/d/1VZVHssxWW5LGYN_ZDXzJcMDn3PEi4ioqMutUtXykAEU/edit?usp=sharing)
+
+## 04 / Technology Stack
 
 <TechStack 
   data='[
     {
-      "title": "Backend & Languages",
-      "items": ["Go (Golang)", "TypeScript", "Node.js", "Gin Framework", "NestJS", "gRPC", "REST API", "GraphQL"],
+      "title": "Frontend (MVP)",
+      "items": ["React 19", "Vite", "TypeScript", "PWA / Service Workers", "Leaflet Maps"],
       "accentColor": "#38BDF8",
-      "accentItems": ["Go (Golang)", "TypeScript", "Node.js"]
+      "accentItems": ["React 19", "TypeScript", "Vite"]
     },
     {
-      "title": "Cloud & Infrastructure",
-      "items": ["AWS EKS", "Kubernetes", "Terraform", "Helm", "ArgoCD", "AWS IAM", "AWS ALB", "AWS Route53"],
-      "accentColor": "#A78BFA",
-      "accentItems": ["AWS EKS", "Kubernetes", "Terraform", "Helm", "ArgoCD", "AWS IAM", "AWS ALB", "AWS Route53"]
-    },
-    {
-      "title": "Data & Messaging",
-      "items": ["PostgreSQL", "Apache Kafka", "Redis", "DynamoDB", "Elasticsearch", "S3"],
+      "title": "Backend (MVP)",
+      "items": ["Node.js", "Express", "TypeScript", "Socket.io", "REST API"],
       "accentColor": "#34D399",
-      "accentItems": ["PostgreSQL", "Apache Kafka", "Redis", "DynamoDB", "Elasticsearch", "S3"]
+      "accentItems": ["Node.js", "Express", "Socket.io"]
     },
     {
-      "title": "Observability & CI/CD",
-      "items": ["Prometheus", "Grafana", "Loki", "Datadog", "GitHub Actions", "PagerDuty"],
+      "title": "Data & Payments",
+      "items": ["PostgreSQL (Supabase)", "Redis Pub/Sub", "Paystack Webhooks", "Paystack Transfer API"],
+      "accentColor": "#A78BFA",
+      "accentItems": ["PostgreSQL (Supabase)", "Redis Pub/Sub", "Paystack Webhooks"]
+    },
+    {
+      "title": "Production Scale (Ongoing)",
+      "items": ["Go (Gin)", "NestJS", "Kafka", "DynamoDB", "Elasticsearch", "AWS EKS", "Kubernetes", "Terraform", "ArgoCD", "Prometheus", "Grafana"],
       "accentColor": "#FB923C",
-      "accentItems": ["Prometheus", "Grafana", "Loki", "Datadog", "GitHub Actions", "PagerDuty"]
+      "accentItems": ["Go (Gin)", "Kafka", "AWS EKS", "Kubernetes"]
     }
   ]'
 />
