@@ -9,6 +9,13 @@ import { ResultsGrid } from '@/components/mdx/ResultsGrid';
 import { FlowmartArchitecture } from '@/components/mdx/FlowmartArchitecture';
 import { TechStack } from '@/components/mdx/TechStack';
 
+export async function generateStaticParams() {
+  const projects = await getAllProjects();
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
 // Using type any for Next.js App Router params which is slightly tricky with strict typing
 export default async function ProjectCaseStudy(props: any) {
   // Fix Next.js 15+ App Router prop promise
